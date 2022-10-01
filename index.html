@@ -8,14 +8,8 @@
         <link rel="shortcut icon" href="favicon.ico">
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="stylesheet" href="./js/bootstrap.js">
-        <!--<link rel="stylesheet" href="./CCS/estilos.css">
-       <!--si se tiene muchas hojas y se aplica el mismo atributo, es conveniente
-        usar el archivo externo
-       <style>
-        header{
-            background-color: rgb(171, 173, 173);
-        } estilo interno
-       </style>-->
+        <!--<link rel="stylesheet" href="./CCS/estilos.css">-->
+       
         <style>
             *{
                 margin: 0;
@@ -27,6 +21,10 @@
                 display: flex;
                 justify-content: left;
                 
+            }
+            .justificadofinal{
+                justify-content: end;
+                width: 100%;
             }
             .logo{
                 display: flex;
@@ -173,21 +171,50 @@
         </style>
     </head>
     <body>
+        <!--
         <header class="header__flex">
             <div class="logo">
-                <img class="img__logo" src="./assets/imagenes/codoacodo.png" alt="Logo de codo a codo" loading="lazy">
+                <img class="img__logo" src="./assets/imagenes/codoacodo.png" alt="Logo de codo a codo" width="100" loading="lazy">
                 <h2 class="link2">Conf.Bs.As.</h2>
             </div>
-                <div class="navegador">
+                <div class="navegador justificadofinal">
                     <nav>
-                        <a class="link" href="#">La Conferencia </a>
-                        <a class="link" href="./pages/los_oradores.html"> Los oradores </a>
-                        <a class="link" href="./pages/lugaryfecha.html"> El lugar y la Fecha </a>
-                        <a class="link" href="./pages/contacto.html"> Conviértete en Orador </a>
+                        <a class="link text text-white" href="#">La Conferencia </a>
+                        <a class="link text-muted" href="./pages/los_oradores.html"> Los oradores </a>
+                        <a class="link text-muted" href="./pages/lugaryfecha.html"> El lugar y la Fecha </a>
+                        <a class="link text-muted" href="./pages/contacto.html"> Conviértete en Orador </a>
                         <a class="link1" href="./pages/comprartickets.html"> Comprar Tickets </a>
                     </nav>
                 </div>
             </div>
+        </header>
+        -->
+        <header >
+            <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+                <div class="container-fluid">
+                  <a class="navbar-brand text-white" href="#">
+                    <img src="./assets/imagenes/codoacodo.png" alt="logo" width="100">
+                    Conf.Bs.As.
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 justificadofinal">
+                            <li class="nav-item">
+                             <a class="nav-link active text-white" aria-current="page" href="#">La conferencia</a>
+                            </li>
+                            <li class="nav-item"> <a  class="nav-link" href="#oradores">Los oradores</a></li>
+                            <li class="nav-item"> <a  class="nav-link" href="#lugarYFecha">El lugar y la Fecha</a></li>
+                            <li class="nav-item"> <a  class="nav-link" href="#formulario">Conviértete en Orador</a></li>
+                            <li class="nav-item"> <a  class="nav-link text-bg-success" href="./pages/comprartickets.html">Comprar Tickets</a></li>
+                         
+                         </ul>
+                   
+                  </div>
+                </div> 
+              </nav>
         </header>
         <main>
             <section class="sectionPrincipal ">
@@ -204,6 +231,7 @@
                     </div>
                     
                 </div>
+                <script src="js/bootstrap.bundle.js"></script>
             </section>
         </main>
         <section class="sectionTarjeta">
@@ -272,7 +300,7 @@
                         
                         Según informó la web del Ministerio de Comunicaciones, el programa incluye conferencias magistrales y presentaciones orales de los trabajos aprobados por el Comité Científico, además de espacios para el intercambio sobre los temas presentados.
                         
-                        Las conferencias estarán relacionadas con temas como televisión digital, tecnologías de la Información y las Comunicaciones (TIC), soluciones para sistemas de telecomunicaciones, computación en la nube, seguridad informática, aplicaciones de la IA a los sistemas de telecomunicaciones, optimización del espectro radioeléctrico, tecnologías inalámbricas y redes móviles.</p>
+                        Optimización del espectro radioeléctrico, tecnologías inalámbricas y redes móviles.</p>
                     <br>
                     <div>
                         <button type="button" class="btn btn-dark">Conoce más</button>
