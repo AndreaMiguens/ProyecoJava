@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Proyecto HTML</title>
+        <link rel="shortcut icon" href="./assets/imagenes/codoacodo.png">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./js/bootstrap.js">
+              
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .header__flex{
+                background-color: rgb(75, 71, 71);
+                display: flex;
+                justify-content: left;
+                
+            }
+            
+            .logo{
+                display: flex;
+                align-items: center;
+                width: 40%;
+                padding-left: 2rem;
+            }
+            .img__logo{
+                width: 25%;  
+                
+            }
+            
+            @media screen and (max-width: 900px) {
+                .header__flex{
+                    flex-direction: column;
+                }
+                    
+            }
+            .navegador{
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between right;
+
+            }
+            .link{
+                text-decoration: none;
+                color: white;
+                font-size: 1rem;
+                margin: 6px;
+            }
+            .link1{
+                text-decoration: none;
+                color: rgb(15, 233, 15);
+                font-size: 1rem;
+                margin: 25px;
+            }
+            
+            .sectionTarjeta{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .padreTarjetas{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .tarjetas__flex{
+                width: 65%;
+                display: flex;
+                justify-content:space-evenly;
+            }
+            .tarjeta{
+                background-color: white;
+                width: 30%;
+                border: 1px solid rgb(214, 214, 214);
+                border-radius: 10px;
+            }
+            .tarjetaImagen{
+                width: 100%;
+                border-radius: 10px;
+            }
+            .tarjetaContenido{
+                padding: 1rem;
+            }
+            .tarjetaParrafo{
+                width: 80%;
+            }
+            
+            .bg-info1 {
+                padding: 1%;
+                background-color: rgb(48, 30, 97);
+                display: flex;
+                justify-content:center;
+                color: white;
+                height: 45px;
+                vertical-align: text-top;
+                }
+
+            
+        </style>
+    </head>
+    <body>
+     
+        <header >
+            <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+                <div class="container-fluid">
+                  <a class="navbar-brand text-white" href="#">
+                    <img src="./imagenes/codoacodo.png" alt="logo" width="100">
+                    Conf.Bs.As.
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 justificadofinal">
+                            <li class="nav-item">
+                             <a class="nav-link active text-white" aria-current="page" href="#">La conferencia</a>
+                            </li>
+                            <li class="nav-item"> <a  class="nav-link" href="./Laconferencia.html">Los oradores</a></li>
+                            <li class="nav-item"> <a  class="nav-link" href="#lugarYFecha">El lugar y la Fecha</a></li>
+                            <li class="nav-item"> <a  class="nav-link" href="#formulario">Conviértete en Orador</a></li>
+                            <li class="nav-item"> <a  class="nav-link text-bg-success" href="#comprartickets.html">Comprar Tickets</a></li>
+                         
+                         </ul>
+                   
+                  </div>
+                </div> 
+              </nav>
+        </header>
+        <br>
+        <br>
+        <section class="sectionTarjeta">
+            <div class="tarjetas__flex ">
+                <div class="card" style="width: 18rem;">
+                  
+                  <div class="card-body">
+                    <h5 class="text-center">Estudiante</h5>
+                    <p class="text-center">Tiene un descuento</p>
+                    <p class="text-center">80%</p>
+                    <p class="text-center">*presentar documentación</p>
+                    
+                  </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                    <div>
+                        
+                    </div>
+                    <h5 class="text-center">Trainee</h5>
+                    <p class="text-center">Tienen un descuento</p>
+                    <p class="text-center">50%</p>
+                    <p class="text-center">*presentar documentación</p>
+                    
+                  </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                  
+                  <div class="card-body">
+                    <div>
+                        
+                    </div>
+                    <h5 class="text-center">Junior</h5>
+                    <p class="text-center">Tienen un descuento</p>
+                    <p class="text-center">15%</p>
+                    <p class="text-center">*presentar documentación</p>
+                    
+                  </div>
+                </div>
+            
+              </div>
+           
+        </section>
+        
+        <section>
+        <div class="container-fluid px-1 py-5 mx-auto">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                    <h7>VENTA</h7>
+                    <H2><p class="blue-text">VALOR DE TICKET $200</p></H2>
+                    
+                    <div class="card">
+                        
+                        <form class="form-card" onsubmit="event.preventDefault()">
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Nombre<span class="text-danger"> *</span></label> <input type="text" id="fname" name="fname" placeholder="Ingrese su nombre" onblur="validate(1)"> </div>
+                                <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Apellido<span class="text-danger"> *</span></label> <input type="text" id="lname" name="lname" placeholder="Ingrese su apellido" onblur="validate(2)"> </div>
+                            </div>
+                                <div class="row justify-content-between text-left">
+                                
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                  <div class="form-group">
+                                      <label for="form_message"></label>
+                                      <textarea id="form_message" name="message" class="form-control" placeholder="Sobre que quieres hablar!" rows="4" required="required" data-error="Por favor, déjenos un mensaje"></textarea
+                                          >
+                                      </div>
+          
+                                  </div>
+          
+          
+                              <div class="col-md-12">
+                                      <div class="d-grid gap-2">
+                                        <button class="btn btn-success" type="button">Enviar</button>
+                                        
+                                      </div>
+                              
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+       </section>
+       
+
+         </form>
+       </section>
+       <br>
+       
+       </article>
+     
+       <footer> 
+            <div class="row bg-info1 container-fluid text-center text-wrap">
+                <div class="col"> <a class="link" href="">Preguntas Frecuentes</a>
+                  
+                </div>
+                <div class="col"> <a class="link" href="">Contactanos</a>
+                  
+                </div>
+                <div class="col"> <a class="link" href="">Prensa</a>
+                  
+                </div>
+                <div class="col"> <a class="link" href="">Conferencia</a>
+                  
+                </div>
+                <div class="col"> <a class="link" href="">Términos y condiciones</a>
+                  
+                </div>
+                <div class="col"> <a class="link" href="">Publicidad</a>
+                  
+                </div>
+                <div class="col"> <a class="link" href="">Estudiantes</a>
+                  
+                  </div>
+            </div>
+       </footer>
+       <script src="js/bootstrap.bundle.js"></script>
+       
+    </body>
+</html>

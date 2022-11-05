@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información</title>
+    <link rel="shortcut icon" href="./assets/imagenes/codoacodo.png">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./js/bootstrap.js">
+
+    <style>
+        body{background-color: rgba(0, 132, 255, 0.603);
+    
+
+        }
+ 
+    </style>
+</head>
+<script src="./codigo.js"></script>
+<body id="cuerpo">
+    
+
+    <div class="col-6 px-6">
+                                      
+        <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+          <div class="valid-feedback">
+           Looks good!
+          </div>
+      </div>
+       <div class="col-6 px-6">
+        
+        <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+
+      <div class="col-md-6">
+        <label for="validationCustom03" id="cantidadTickets" class="form-label">Cantidad</label>
+        <input type="number" class="form-control" id="validationCustom03" required>
+    
+      <div class="invalid-feedback">
+      Por favor ingrese una cantidad valida
+    </div> 
+</div>
+<div class="col-md-6">
+  <label for="validationCustom04" class="form-label">Categoria</label>
+  <select class="form-select" id="categoria" required>
+    <option selected disabled value="">Sin categoria</option>
+    <option>Trainee</option>
+    <option>Junior</option>
+    <option>Estudiante</option>
+  </select>
+  <div class="invalid-feedback">
+  Por favor ingrese un valor valido
+  </div>
+</div>
+    
+<div class="container ">
+    <button class="btn botones1" type="reset">Borrar</button>
+    <button class="btn botones1" type="submit" id="Resumen">Resumen</button>
+
+</div>
+<div class="boton2 row rounded-2 text-left d-grid container-fluid p-0 m-4">
+    <button class="btn text-lg-start" type="button">Total a pagar: $ </button>
+
+</div>
+
+<script src="js/bootstrap.bundle.js"></script>
+
+<script>
+    let nombre = document.getElementById('nombre')
+    console.log(nombre);
+    let apellido = document.getElementById('apellido')
+    console.log(apellido);
+    let cantidad = document.getElementById('cantidad')
+    console.log(Cantidad);
+    let resumen = document.getElementById('resumen')
+    console.log(resumen);
+
+    resumen.addEventListener('click', function(){
+            
+            console.log(typeof(nombre.value));
+            console.log(typeof(apellido.value));
+             if (nombre.value === ''){
+                   alert('el nombre no puede estar vacio');
+                   return;
+             }
+           if (apellido.value ===''){
+               alert('el apellido no puede estar vacio');
+               return;
+           }
+             alert('Hola ' + nombre.value + ' ' + apellido.value);
+            }
+        );
+
+
+</script>
+<script src="./codigo.js"></script>
+</body>
+</html>
